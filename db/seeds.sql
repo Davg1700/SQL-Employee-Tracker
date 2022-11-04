@@ -2,16 +2,15 @@ INSERT INTO department (name)
 VALUES ("Sales"),
        ("Engineering"),
        ("Tech"),
-       ("Government"),
-       ("Other");
+       ("Government");
 
 INSERT INTO role (title, salary, department_id)
 VALUES ("Sales Rep", 10000, 1),
        ("Cook", 8000, 1),
        ("Engineer", 150000, 2),
-       ("Software Engineer", 120000, 2),
+       ("Software Engineer", 120000, 3),
        ("Electical Engineer", 10000, 3),
-       ("Military", 12500, 3),
+       ("Military", 12500, 4),
        ("Teacher", 25000, 4),
        ("President", 190000, 4);
 
