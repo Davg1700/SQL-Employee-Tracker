@@ -122,8 +122,7 @@ addDepartment = () => {
 }
 
 const addRole = () => {
-
-    return inquirer.prompt([
+    inquirer.prompt([
         {
             type: 'input',
             message: 'Enter new role name',
@@ -173,3 +172,58 @@ const addRole = () => {
         },
     ])
 };
+
+addEmp = () => {
+    inquirer.prompt([
+        {
+            type: 'input',
+            message: 'Enter employees first name',
+            name: 'empFN',
+            validate: name => {
+                if (name) {
+                    return true;
+                }
+                else {
+                    console.log("Please enter a name...");
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            message: 'Enter employees last name',
+            name: 'empLN',
+            validate: name => {
+                if (name) {
+                    return true;
+                }
+                else {
+                    console.log("Please enter a name...");
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'select',
+            message: 'Select employees role',
+            name: 'empRole',
+            choices: ['role', 'role2']
+        },
+        {
+            type: 'input',
+            message: 'Enter employees manager',
+            name: 'empMang',
+            validate: name => {
+                if (name) {
+                    return true;
+                }
+                else {
+                    console.log("Please enter a name...");
+                    return false;
+                }
+            }
+        },
+    ])
+};
+
+init();
